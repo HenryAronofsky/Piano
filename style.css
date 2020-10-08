@@ -1,0 +1,141 @@
+*, *::befor, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #143F6B;
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.piano {
+	display: flex;
+}
+
+.key {
+	height: calc(var(--width) * 4);
+	width: var(--width);
+}
+
+.white {
+	--width: 100px;
+	background-color: white;
+	border: 1px solid #333;
+}
+
+.white.active {
+	background-color: #CCC;
+}
+
+.black {
+	--width: 60px;
+	background-color: black;
+	margin-left: calc(var(--width) / -2);
+	margin-right:calc(var(--width) / -2);;
+	z-index: 2;
+}
+
+.black.active {
+	/*background-color: #333;*/
+	background-color: #999;
+}
+
+input {
+  margin: 20px 0 0 30px;
+  -webkit-appearance: none;
+  width: 500px;
+  height: 5px;
+  background: white;
+  outline: none;
+  /*opacity: 0.7;*/
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+input:hover {
+  opacity: 0.8;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 20px;
+}
+
+input::-moz-range-thumb {
+  width: 25px;
+  height: 20px;
+  background: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+#volumeTag {
+	color: white;
+	margin: 3px 0 0 25px;
+	font-size: 2.2rem;
+	/*text-align: left;*/
+}
+
+.increments {
+	color: white;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+}
+
+.increments:hover {
+    -webkit-transition: .2s;
+	opacity: 0.7;
+}
+
+.voluemChange {
+	display: inline-flex;
+	margin-top: 10px;
+}
+
+.increments {
+	margin-top: 0;
+}
+
+.plus {
+	margin-left: 20px;
+}
+
+.minus {
+	margin-top: -5px;
+	font-size: 2.5rem;
+}
+
+#record {
+  position: absolute;
+  top: 50%;
+  margin-top: -250px;
+  background-color: white;
+  width: 20%;
+  text-align: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
